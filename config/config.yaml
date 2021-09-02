@@ -1,0 +1,863 @@
+alpha_max: -1.1
+alpha_min: -0.6
+casa_executable: /home/tim/casa/bin/casa
+data_directory: /home/tim/dr2
+energy_cutoff: 0.
+frequency: 144.e+6
+out_directory: /home/tim/dr2/out
+proton_electron_ratio: 100
+threads: 8 # Use 1 to disable parallel processing
+galaxies:
+  - name: n855
+    distance: 9.73
+    inclination: 74
+    magnetic_levels: [8, 9, 10]
+    pathlength: 1.4e+3
+    radio_integrated: 0.007
+    region_ellipse: [0.3, 0.2]
+    rms_20: 0.0001
+    rms_6: 0.000128
+    size: 10.
+    spix: -0.24
+    spix_error: 0.09
+    use_integrated: true
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n891
+    distance: 9.1
+    inclination: 0 # 90
+    pathlength: 12.55e+3 # 1.e+3
+    radio_integrated: 2.985
+    region_ellipse: [4.6, 2]
+    rms_20: 0.000160
+    rms_6: 0.000178
+    size: 13.
+    spix: -0.63
+    spix_error: 0.04
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n925
+    calc_energy: true
+    calc_h1: true
+    calc_sfr: true
+    calc_surf: true
+    co:
+      p0: [1, 1]
+      pathlength: 100
+      rms: 0.021
+    distance: 9.12
+    energy:
+      cutoff: 0.
+      levels: [4.5e-12, 6.5e-12, 9.e-12]
+      p0: [1, 1]
+      vmax: 0.8e-11
+    h1:
+      p0: [1, 0.5]
+      pathlength: 400
+      rms: 0.68
+    inclination: 50
+    magnetic_levels: [9, 12, 15]
+    pathlength: 1.4e+3
+    radio_integrated: 0.197
+    radio_levels: [1.5e-4, 3.e-4, 4.5e-4, 6.e-4, 7.5e-4, 9.e-4, 1.05e-3]
+    region_ellipse: [4.4, 2.3]
+    rms_20: 0.000100
+    rms_6: 0.000087
+    sfr:
+      p0: [30, 0.25]
+      rms: 8.810345e-4
+      mean: 0.75
+    size: 15.
+    spix: -0.46
+    spix_error: 0.06
+    smooth_exp: true
+    smooth_length: 3.25
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n2683
+    distance: 6.27
+    inclination: 0 # 79
+    magnetic_levels: [7, 9, 11, 13]
+    # CHANG-ES
+    pathlength: 4.695e+3 # 1.e+3
+    radio_integrated: 0.284
+    region_ellipse: [2.6, 1.1]
+    rms_20: 0.000130
+    rms_6: 0.000072
+    size: 10.
+    spix: -0.66
+    spix_error: 0.06
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n2798
+    distance: 25.8
+    inclination: 75
+    pathlength: 1.4e+3
+    radio_integrated: 0.22
+    region_ellipse: [0.6, 0.6]
+    rms_20: 0.00013
+    rms_6: 0.000078
+    size: 10.
+    spix: -0.46
+    spix_error: 0.06
+    use_integrated: true
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n2820
+    distance: 26.5
+    inclination: 0 # 88
+    magnetic_levels: [6, 9, 12, 15]
+    # CHANG-ES
+    pathlength: 6.9e+3 # 1.e+3
+    radio_integrated: 0.251
+    region_ellipse: [2.9, 0.9]
+    rms_20: 0.000110
+    rms_6: 0.000061
+    size: 10.
+    spix: -0.64
+    spix_error: 0.04
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n2841
+    calc_energy: true
+    calc_h1: true
+    calc_sfr: true
+    calc_surf: true
+    co:
+      p0: [1, 1]
+      pathlength: 100
+      rms: 0.044
+    distance: 14.1
+    energy:
+      cutoff: 0.
+      levels: [2.e-12, 4.e-12, 6.e-12, 8.e-12, 10.e-12]
+      p0: [1, 1.1]
+      vmax: 5.e-11
+    h1:
+      p0: [0.1, 0.1]
+      pathlength: 400
+      rms: 0.39
+    inclination: 69
+    pathlength: 1.4e+3
+    radio_integrated: 0.463
+    radio_levels: [1.5e-4, 3.e-4, 4.5e-4, 6.e-4, 7.5e-4, 9.e-4, 1.05e-3]
+    region_ellipse: [3.1, 2.3]
+    rms_20: 0.000100
+    rms_6: 0.000079
+    sfr:
+      p0: [30, 0.25]
+      rms: 9.520375e-5
+      mean: 1.88
+    size: 9.
+    spix: -0.72
+    spix_error: 0.05
+    smooth_exp: true
+    smooth_length: 3.23
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n2976
+    distance: 3.55
+    calc_energy: true
+    calc_h1: true
+    calc_sfr: true
+    calc_surf: true
+    co:
+      p0: [1, 1]
+      pathlength: 100
+      rms: 0.044
+    energy:
+      cutoff: 0.
+      levels: [3.e-12, 6.e-12, 9.e-12, 12.e-12]
+      p0: [1, 1]
+      vmax: 1.5e-11
+    h1:
+      p0: [1, 0.5]
+      pathlength: 400
+      rms: 0.66
+    inclination: 54
+    magnetic_levels: [8, 12, 16]
+    pathlength: 1.4e+3
+    radio_integrated: 0.109
+    radio_levels: [1.5e-4, 3.e-4, 4.5e-4, 6.e-4, 7.5e-4, 9.e-4, 1.05e-3]
+    region_ellipse: [1.8, 1]
+    ref_beam: [13, 12.5]
+    ref_freq: 1365.
+    ref_name: "n2976_1365MHz"
+    rms_20: 0.000150
+    rms_6: 0.000059
+    rms_ref: 0.000081
+    sfr:
+      p0: [30, 0.25]
+      rms: 1.095e-4
+      mean: 0.12
+    size: 10.
+    spix: -0.49
+    spix_error: 0.05
+    thermal_beam: [13.4, 13.4]
+    thermal_freq: 1365.
+    thermal_name: "N2976-20cm-tr_taba_13.4arc"
+    use_thermal: true
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n3003
+    distance: 25.4
+    inclination: 0 # 90
+    magnetic_levels: [5.5, 8, 10.5]
+    # CHANG-ES
+    pathlength: 13.85e+3 # 1.e+3
+    radio_integrated: 0.132
+    region_ellipse: [2.1, 0.9]
+    rms_20: 0.00012
+    rms_6: 0.000068
+    size: 8.
+    spix: -0.59
+    spix_error: 0.06
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n3077
+    distance: 3.83
+    calc_energy: true
+    calc_h1: true
+    calc_sfr: true
+    calc_surf: true
+    co:
+      p0: [1, 1]
+      pathlength: 100
+      rms: 0.320239
+    energy:
+      cutoff: 0.
+      levels: [2.e-12, 5.e-12, 8.e-12, 11.e-12]
+      p0: [1, 1]
+      vmax: 1.5e-11
+    h1:
+      p0: [1, 0.5]
+      pathlength: 400
+      rms: 0.044
+    inclination: 38
+    magnetic_levels: [3, 5, 9, 12, 15, 18, 20]
+    pathlength: 1.4e+3
+    radio_integrated: 0.059
+    radio_levels: [1.5e-4, 3.e-4, 4.5e-4, 6.e-4, 7.5e-4, 9.e-4, 1.05e-3]
+    region_ellipse: [0.8, 0.6]
+    rms_20: 0.00013
+    rms_6: 0.000066
+    sfr:
+      p0: [30, 0.25]
+      rms: 1.077902e-4
+      mean: 0.12
+    size: 10.
+    skip_combined_energy: true
+    skip_combined_h1: true
+    skip_combined_surf: true
+    spix: -0.31
+    spix_error: 0.06
+    use_integrated: true
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n3079
+    distance: 20.6
+    inclination: 0 # 88
+    # CHANG-ES
+    pathlength: 13.e+3 # 1.e+3
+    radio_integrated: 3.707
+    region_ellipse: [3.2, 2]
+    rms_20: 0.00011
+    rms_6: 0.00007
+    size: 10.
+    spix: -0.67
+    spix_error: 0.04
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n3184
+    calc_energy: true
+    calc_h1: true
+    calc_sfr: true
+    calc_surf: true
+    co:
+      p0: [1, 1]
+      pathlength: 100
+      rms: 0.02
+    distance: 11.7
+    energy:
+      cutoff: 0.
+      levels: [2.e-12, 5.e-12, 8.e-12, 11.e-12]
+      p0: [1.e-12, 1]
+      vmax: 1.5e-11
+    h1:
+      p0: [1, 0.5]
+      pathlength: 400
+      rms: 0.4
+    inclination: 29
+    magnetic_levels: [7, 10, 13, 16, 19]
+    pathlength: 1.4e+3
+    radio_integrated: 0.337
+    radio_levels: [1.5e-4, 3.e-4, 4.5e-4, 6.e-4, 7.5e-4, 9.e-4, 1.05e-3]
+    region_ellipse: [3.2, 3.2]
+    ref_beam: [18.5, 12.5]
+    ref_freq: 1365.
+    ref_name: "n3184_1365MHz"
+    rms_20: 0.00011
+    rms_6: 0.000059
+    rms_ref: 0.000114
+    sfr:
+      p0: [30, 0.25]
+      rms: 7.5483575e-5
+      mean: 1.49
+    size: 10.
+    smooth_exp: true
+    smooth_length: 3.79
+    spix: -0.62
+    spix_error: 0.05
+    thermal_beam: [18.5, 13.4]
+    thermal_freq: 1366.
+    thermal_name: "N3184_20cm-tr_taba"
+    use_thermal: true
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n3198
+    calc_energy: true
+    calc_h1: true
+    calc_sfr: true
+    calc_surf: true
+    co:
+      p0: [1, 1]
+      pathlength: 100
+      rms: 0.017
+    distance: 14.1
+    energy:
+      cutoff: 0.
+      levels: [1.5e-12, 3.5e-12, 5.5e-12]
+      p0: [1.e-12, 1]
+      vmax: 1.e-11
+    h1:
+      p0: [1, 0.5]
+      pathlength: 400
+      rms: 0.37
+    inclination: 72
+    magnetic_levels: [7, 8.5, 10, 11.5]
+    pathlength: 1.4e+3
+    radio_integrated: 0.099
+    radio_levels: [1.5e-4, 3.e-4, 4.5e-4, 6.e-4, 7.5e-4, 9.e-4, 1.05e-3]
+    region_ellipse: [2.7, 1]
+    rms_20: 0.00015
+    rms_6: 0.000091
+    sfr:
+      p0: [0.9, 0.01]
+      rms: 1.0376615e-4
+      mean: 1.49
+    size: 10.
+    smooth_exp: true
+    smooth_length: 3.17
+    spix: -0.46
+    spix_error: 0.06
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n3265
+    distance: 19.6
+    inclination: 47
+    magnetic_levels: [12, 15, 18, 21, 24]
+    pathlength: 1.4e+3
+    radio_integrated: 0.023
+    region_ellipse: [0.4, 0.5]
+    rms_20: 0.00011
+    rms_6: 0.000085
+    size: 10.
+    spix: -0.34
+    spix_error: 0.06
+    use_integrated: true
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n3432
+    distance: 9.42
+    inclination: 0 # 85
+    magnetic_levels: [6, 9, 12]
+    pathlength: 4.98e+3
+    radio_integrated: 0.274
+    region_ellipse: [3.7, 0.9]
+    rms_20: 0.00009
+    rms_6: 0.000070
+    size: 10.
+    spix: -0.58
+    spix_error: 0.04
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n3448
+    distance: 24.5
+    inclination: 0 # 78
+    pathlength: 6.25e+3
+    radio_integrated: 0.173
+    region_ellipse: [1.1, 0.6]
+    rms_20: 0.000140
+    rms_6: 0.000061
+    size: 10.
+    spix: -0.62
+    spix_error: 0.04
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n3556
+    distance: 14.09
+    inclination: 0 # 81
+    magnetic_levels: [6, 9, 12, 15]
+    pathlength: 12.45e+3
+    radio_integrated: 1.065
+    region_ellipse: [3.4, 1.5]
+    rms_20: 0.000080
+    rms_6: 0.000082
+    size: 10.
+    spix: -0.62
+    spix_error: 0.04
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n3877
+    distance: 17.7
+    inclination: 0 # 85
+    magnetic_levels: [6, 9, 12]
+    pathlength: 9.25e+3
+    radio_integrated: 0.147
+    region_ellipse: [1.8, 0.7]
+    rms_20: 0.000080
+    rms_6: 0.000069
+    size: 10.
+    spix: -0.55
+    spix_error: 0.04
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n3938
+    distance: 17.9
+    calc_sfr: true
+    inclination: 36
+    magnetic_levels: [11, 13, 15]
+    pathlength: 1.4e+3
+    radio_integrated: 0.334
+    radio_levels: [3.e-4, 4.5e-4, 6.e-4, 7.5e-4, 9.e-4, 1.05e-3]
+    region_ellipse: [2, 2]
+    rms_20: 0.000070
+    rms_6: 0.000071
+    sfr:
+      p0: [100, 0.1]
+      rms: 7.9666175e-4
+      mean: 2.98
+    size: 10.
+    spix: -0.67
+    spix_error: 0.05
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n4013
+    distance: 16.0
+    inclination: 0 # 88
+    magnetic_levels: [6, 9, 12, 15, 18]
+    pathlength: 8.05e+3
+    radio_integrated: 0.144
+    region_ellipse: [2, 0.6]
+    rms_20: 0.000090
+    rms_6: 0.000088
+    size: 10.
+    spix: -0.60
+    spix_error: 0.04
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n4096
+    distance: 10.32
+    inclination: 0 # 82
+    magnetic_levels: [6, 8, 10]
+    pathlength: 5.9e+3
+    radio_integrated: 0.169
+    region_ellipse: [2.2, 0.9]
+    rms_20: 0.000070
+    rms_6: 0.000068
+    size: 10.
+    spix: -0.60
+    spix_error: 0.04
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n4125
+    distance: 24.77
+    inclination: 36
+    pathlength: 1.4e+3
+    radio_integrated: 0.012
+    region_ellipse: [0.3, 0.3]
+    rms_20: 0.000050
+    rms_6: 0.000076
+    size: 10.
+    spix: -0.84
+    spix_error: 0.07
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n4157
+    distance: 15.6
+    inclination: 0 # 83
+    magnetic_levels: [6, 9, 12, 15]
+    pathlength: 8.3e+3
+    radio_integrated: 0.921
+    region_ellipse: [2.7, 1.4]
+    rms_20: 0.000130
+    rms_6: 0.000058
+    size: 10.
+    spix: -0.69
+    spix_error: 0.04
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n4217
+    distance: 20.6
+    inclination: 0 # 86
+    magnetic_levels: [6, 9, 12, 15, 18]
+    pathlength: 11.7e+3
+    radio_integrated: 0.427
+    region_ellipse: [2, 0.9]
+    rms_20: 0.000090
+    rms_6: 0.000067
+    size: 10.
+    spix: -0.63
+    spix_error: 0.04
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n4244
+    distance: 4.4
+    inclination: 0 # 90
+    magnetic_levels: [6, 8, 10]
+    pathlength: 7.2e+3
+    radio_integrated: 0.049
+    region_ellipse: [5.9, 0.9]
+    rms_20: 0.000110
+    rms_6: 0.000074
+    size: 18.
+    spix: -0.57
+    spix_error: 0.05
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n4449
+    distance: 4.02
+    calc_energy: false
+    calc_h1: true
+    energy:
+      cutoff: 0.
+      levels: [1.5e-12, 3.5e-12, 5.5e-12]
+      p0: [1, 1]
+      vmax: 5.e-11
+    h1:
+      p0: [1, 1]
+      pathlength: 400
+      rms: 0.96
+    inclination: 54
+    magnetic_levels: [11, 14, 17, 20, 23]
+    pathlength: 1.0e+3
+    radio_integrated: 0.863
+    region_ellipse: [3.3, 3.1]
+    rms_20: 0.000100
+    rms_6: 0.000061
+    size: 10.
+    skip_combined_energy: true
+    skip_combined_h1: true
+    spix: -0.49
+    spix_error: 0.06
+    use_integrated: true
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n4625
+    distance: 9.3
+    inclination: 23
+    magnetic_levels: [11, 12, 13]
+    pathlength: 1.4e+3
+    radio_integrated: 0.017
+    region_ellipse: [0.8, 0.6]
+    rms_20: 0.000070
+    rms_6: 0.000089
+    size: 10.
+    spix: -0.35
+    spix_error: 0.15
+    use_integrated: true
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n4631
+    distance: 7.62
+    inclination: 0 # 85
+    pathlength: 11.7e+3
+    radio_integrated: 4.031
+    region_ellipse: [6.5, 3.5]
+    rms_20: 0.000100
+    rms_6: 0.000051
+    size: 20.
+    spix: -0.65
+    spix_error: 0.04
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n4725
+    distance: 11.9
+    calc_sfr: true
+    inclination: 43
+    magnetic_levels: [11, 14, 17, 20]
+    pathlength: 1.4e+3
+    radio_integrated: 0.154
+    radio_levels: [2.e-4, 3.5e-4, 5.e-4, 6.5e-4, 8.e-4, 9.5e-4, 1.1e-3]
+    region_ellipse: [3.4, 2.2]
+    ref_beam: [29, 12.5]
+    ref_freq: 1365.
+    ref_name: "n4725_1365MHz"
+    rms_20: 0.000100
+    rms_6: 0.000127
+    rms_ref: 0.0000358
+    sfr:
+      p0: [30, 0.25]
+      rms: 1.037e-4
+      mean: 1.19
+    size: 10.
+    spix: -0.56
+    spix_error: 0.06
+    thermal_beam: [29, 13.4]
+    thermal_freq: 1365.
+    thermal_name: "N4725-20cm-tr_taba_29arcx13.4arc"
+    use_thermal: false
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n4736
+    calc_energy: true
+    calc_h1: true
+    calc_sfr: true
+    calc_surf: true
+    co:
+      p0: [1, 1]
+      pathlength: 100
+      rms: 0.023
+    distance: 4.66
+    energy:
+      cutoff: 0.
+      levels: [2.e-12, 5.e-12, 8.e-12, 11.e-12, 14.e-12]
+      p0: [1, 1]
+      vmax: 5.e-11
+    h1:
+      p0: [1, 0.5]
+      pathlength: 400
+      rms: 0.38
+    inclination: 44
+    magnetic_levels: [12, 15, 18, 21, 24]
+    pathlength: 1.4e+3
+    radio_integrated: 0.803
+    radio_levels: [5.e-4, 1.e-3, 1.5e-3, 2.e-3, 2.5e-3, 3.e-3]
+    region_ellipse: [2.3, 1.8]
+    ref_beam: [19, 12.5]
+    ref_freq: 1365.
+    ref_name: "n4736_1365MHz"
+    rms_20: 0.000100
+    rms_6: 0.000071
+    rms_ref: 0.000433
+    sfr:
+      p0: [30, 0.25]
+      rms: 5.9257575e-5
+      vmax: 0.3
+      mean: 0.94
+    size: 10.
+    smooth_exp: true
+    smooth_length: 1.23
+    spix: -0.45
+    spix_error: 0.05
+    thermal_beam: [19, 13.4]
+    thermal_freq: 1374.
+    thermal_name: "N4736-20cm-tr_taba_19arcx13.4arc"
+    use_thermal: true
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n5033
+    distance: 17.13
+    inclination: 64
+    pathlength: 1.4e+3
+    radio_integrated: 1.133
+    region_ellipse: [4.8, 3.1]
+    rms_20: 0.000060
+    rms_6: 0.000084
+    size: 15.
+    spix: -0.66
+    spix_error: 0.05
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n5055
+    calc_energy: true
+    calc_h1: true
+    calc_sfr: true
+    calc_surf: true
+    co:
+      p0: [1, 1]
+      pathlength: 100
+      rms: 0.024
+      vmax: 200.
+    distance: 7.94
+    energy:
+      cutoff: 0.
+      levels: [2.e-12, 5.e-12, 8.e-12, 11.e-12, 14.e-12]
+      p0: [1, 1]
+      vmax: 5.e-11
+    h1:
+      p0: [1, 0.5]
+      pathlength: 400
+      rms: 0.41
+    inclination: 51
+    pathlength: 1.4e+3
+    radio_integrated: 2.262
+    radio_levels: [5.e-4, 1.e-3, 1.5e-3, 2.e-3, 2.5e-3, 3.e-3]
+    region_ellipse: [5.2, 2.9]
+    ref_beam: [18.5, 12.5]
+    ref_freq: 1365.
+    ref_name: "n5055_1365MHz"
+    rms_20: 0.000100
+    rms_6: 0.000060
+    rms_ref: 0.000032
+    sfr:
+      p0: [30, 0.25]
+      rms: 6.54302e-5
+      mean: 2.98
+    size: 15.
+    smooth_exp: true
+    smooth_length: 3.17
+    spix: -0.75
+    spix_error: 0.05
+    thermal_beam: [18.5, 13.4]
+    thermal_freq: 1365.
+    thermal_name: "N5055-20cm-tr_taba_18.5arcx13.4arc"
+    use_thermal: true
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n5194
+    calc_energy: true
+    calc_h1: true
+    calc_sfr: true
+    calc_surf: true
+    co:
+      p0: [1, 0.5]
+      pathlength: 100
+      rms: 0.044
+    distance: 8.
+    energy:
+      cutoff: 0.
+      levels: [4.e-12, 8.e-12, 12.e-12, 16.e-12, 20.e-12]
+      p0: [1, 1]
+      vmax: 0.6e-10
+      vmin: 0.1e-13
+    h1:
+      p0: [1, 0.5]
+      pathlength: 400
+      rms: 0.44
+    inclination: 20
+    magnetic_levels: [12, 15, 18, 21, 24, 27, 30]
+    pathlength: 1.4e+3
+    radio_integrated: 6.70697
+    radio_levels: [5.e-4, 1.e-3, 1.5e-3, 2.e-3, 2.5e-3, 3.e-3]
+    region_ellipse: [6.2, 5]
+    ref_beam: [17, 12.5]
+    ref_freq: 1365.
+    ref_name: "n5194_1365MHz"
+    rms_20: 0.000150
+    rms_6: 0.00005
+    rms_ref: 0.000039
+    sfr:
+      p0: [30, 0.25]
+      rms: 1.525994133e-4
+      mean: 11.89
+    size: 15.
+    smooth_exp: true
+    smooth_length: 3.45
+    spix: -0.67
+    spix_error: 0.04
+    thermal_beam: [15, 15]
+    thermal_freq: 1465.
+    thermal_name: "N5194-20cm-tr_taba_15arc"
+    use_thermal: true
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n5195
+    distance: 8.
+    inclination: 46
+    magnetic_levels: [12, 15, 18, 21, 24, 27, 30]
+    pathlength: 1.4e+3
+    radio_integrated: 1.08443
+    region_ellipse: [2, 1.8]
+    ref_beam: [17, 12.5]
+    ref_freq: 1365.
+    ref_name: "n5194_1365MHz"
+    rms_20: 0.000120
+    rms_6: 0.00005
+    rms_ref: 0.000039
+    size: 15.
+    spix: -0.71
+    spix_error: 0.06
+    thermal_beam: [15, 15]
+    thermal_freq: 1365.
+    thermal_name: "N5194-20cm-tr_taba_15arc"
+    use_thermal: false
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n5297
+    distance: 40.4
+    inclination: 0 # 89
+    magnetic_levels: [6, 7, 8]
+    pathlength: 12.95e+3
+    radio_integrated: 0.107
+    region_ellipse: [1.8, 0.8]
+    rms_20: 0.000080
+    rms_6: 0.000048
+    size: 10.
+    spix: -0.72
+    spix_error: 0.04
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n5457
+    calc_energy: true
+    calc_h1: true
+    calc_surf: true
+    co:
+      p0: [1, 1]
+      pathlength: 100
+      rms: 0.044
+    distance: 6.7
+    energy:
+      cutoff: 0.
+      levels: [6.e-12, 8.e-12, 10.e-12]
+      p0: [1, 1]
+      vmax: 0.1e-10
+      vmin: 0.1e-13
+    h1:
+      p0: [1, 1]
+      pathlength: 400
+      rms: 0.48
+    inclination: 30
+    magnetic_levels: [10, 13, 16, 19]
+    pathlength: 1.4e+3
+    radio_integrated: 2.493
+    region_ellipse: [8.6, 8]
+    rms_20: 0.000120
+    rms_6: 0.000059
+    size: 22.
+    skip_combined_energy: true
+    skip_combined_h1: true
+    skip_combined_surf: true
+    spix: -0.55
+    spix_error: 0.06
+    use_integrated: true
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n5474
+    distance: 6.8
+    inclination: 37
+    magnetic_levels: [10, 11, 12]
+    pathlength: 1.4e+3
+    radio_integrated: 0.00767688
+    region_ellipse: [0.5, 0.5]
+    rms_20: 0.000100
+    rms_6: 0.000060
+    size: 8.
+    spix: -0.22
+    spix_error: 0.06
+    use_integrated: true
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n5907
+    distance: 16.8
+    inclination: 0 # 90
+    magnetic_levels: [5, 7.5, 10, 12.5, 15, 17.5, 20]
+    pathlength: 17.95e+3
+    radio_integrated: 0.492
+    region_ellipse: [3.8, 1.1]
+    rms_20: 0.000120
+    rms_6: 0.000089
+    size: 10.
+    spix: -0.69
+    spix_error: 0.04
+  #---------------------------------------------------------------------------------------------------------------------
+  - name: n7331
+    calc_energy: true
+    calc_h1: true
+    calc_sfr: true
+    calc_surf: true
+    co:
+      p0: [1, 1]
+      pathlength: 100
+      rms: 0.02
+    distance: 14.5
+    energy:
+      cutoff: 0.
+      levels: [3.e-12, 6.e-12, 9.e-12, 12.e-12]
+      p0: [1, 1]
+      vmax: 3.e-11
+      vmin: 0.1e-13
+    h1:
+      p0: [1, 1]
+      pathlength: 400
+      rms: 0.51
+    inclination: 77
+    pathlength: 1.4e+3
+    radio_integrated: 2.077
+    region_ellipse: [4.2, 2]
+    radio_levels: [1.e-4, 3.e-4, 5.e-4, 7.e-4, 9.e-4, 11.e-4]
+    rms_20: 0.000130
+    rms_6: 0.000101
+    sfr:
+      p0: [30, 0.25]
+      rms: 9.188195e-5
+      vmax: 0.9e-1
+      vmin: 0.2e-3
+      mean: 7.48
+    size: 15.
+    spix: -0.72
+    spix_error: 0.02
+  #---------------------------------------------------------------------------------------------------------------------
