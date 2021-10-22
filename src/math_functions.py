@@ -41,7 +41,7 @@ def b_field_revised(
 
     Args:
         alpha (np.array): spectral index
-        beam (float): beam size in [arcsec]
+        beam (float): beam size in [sterad]
         I_nu (np.array): the radio intensity in [Jy/beam] or the flux density in [Jy/kpc²]
         nu (float): the frequency of the radio intensity in [Hz]
         K_0 (int): estimated Proton/Electron ratio in CRs
@@ -122,7 +122,7 @@ def b_field_revised_error(
     Args:
         alpha (np.array): spectral index
         alpha_error (np.array): spectral index error
-        beam (float): beam size in [arcsec]
+        beam (float): beam size in [sterad]
         I_nu (np.array): the radio intensity in [Jy/beam] or the flux density in [Jy/kpc²]
         I_nu_error (float): the radio intensity error in [Jy/beam] or the flux density error in [Jy/kpc²]
         nu (float): the frequency of the radio intensity in [Hz]
